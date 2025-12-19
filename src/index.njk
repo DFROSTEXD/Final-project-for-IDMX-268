@@ -1,0 +1,82 @@
+---
+layout: base.njk
+title: Home
+description: Your ultimate destination for video game reviews, news, guides, and gaming community
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h2>Welcome to {{ metadata.title }}</h2>
+        <p>{{ metadata.description }}</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<main class="main-content">
+    <div class="container">
+        <section class="featured-posts">
+            <h2 class="section-title">Featured Posts</h2>
+            <div class="blog-grid">
+                {% set featuredPosts = collections.posts | reverse %}
+                {% for post in featuredPosts | limit(6) %}
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=Game+Post" alt="{{ post.data.title }}">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">{{ post.data.date | date("%B %d, %Y") }}</span>
+                            {% if post.data.tags %}
+                                {% set displayedTag = false %}
+                                {% for tag in post.data.tags %}
+                                    {% if tag != "posts" and not displayedTag %}
+                                        <span class="category">{{ tag }}</span>
+                                        {% set displayedTag = true %}
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                        <p>{{ post.data.description }}</p>
+                        <a href="{{ post.url }}" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+            <div class="view-all">
+                <a href="/posts/" class="button">View All Posts</a>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3>About {{ metadata.title }}</h3>
+                <p>{{ metadata.description }}</p>
+                <a href="/about/" class="button-small">Learn More</a>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Recent Posts</h3>
+                <ul class="recent-posts">
+                    {% for post in collections.posts | reverse | limit(4) %}
+                    <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Popular Tags</h3>
+                <div class="tag-cloud">
+                    <a href="/tags/reviews/" class="tag">reviews</a>
+                    <a href="/tags/guides/" class="tag">guides</a>
+                    <a href="/tags/esports/" class="tag">esports</a>
+                    <a href="/tags/indie/" class="tag">indie</a>
+                    <a href="/tags/hardware/" class="tag">hardware</a>
+                    <a href="/tags/news/" class="tag">news</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>

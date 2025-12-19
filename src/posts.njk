@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: All Posts
+description: Browse all gaming articles, reviews, guides, and news
+---
+
+<main class="page-content">
+    <div class="container">
+        <header class="page-header">
+            <h1>All Posts</h1>
+            <p>Browse our complete collection of gaming articles, reviews, guides, and news.</p>
+        </header>
+
+        <div class="posts-list">
+            {% for post in collections.posts | reverse %}
+            <article class="post-preview">
+                <div class="post-preview-content">
+                    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                    <div class="post-meta">
+                        <time datetime="{{ post.data.date | date('%Y-%m-%d') }}">{{ post.data.date | date("%B %d, %Y") }}</time>
+                        <span class="separator">•</span>
+                        <span class="author">{{ post.data.author or metadata.author }}</span>
+                    </div>
+                    <p class="post-description">{{ post.data.description }}</p>
+                    <div class="post-tags">
+                        {% for tag in post.data.tags %}
+                            {% if tag != "posts" %}
+                                <a href="/tags/{{ tag }}/" class="tag">#{{ tag }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <a href="{{ post.url }}" class="read-more">Read Full Post →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</main>

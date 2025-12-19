@@ -1,0 +1,34 @@
+---
+layout: base.njk
+---
+
+<article class="post-detail">
+    <div class="container post-container">
+        <header class="post-header">
+            <h1 class="post-title">{{ title }}</h1>
+            <div class="post-meta">
+                <time datetime="{{ date | date('%Y-%m-%d') }}">{{ date | date("%B %d, %Y") }}</time>
+                <span class="separator">•</span>
+                <span class="author">By {{ author or metadata.author }}</span>
+            </div>
+            <p class="post-description">{{ description }}</p>
+            <div class="post-tags">
+                {% for tag in tags %}
+                    {% if tag != "posts" %}
+                        <a href="/tags/{{ tag }}/" class="tag">#{{ tag }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </header>
+        
+        <div class="post-content">
+            {{ content | safe }}
+        </div>
+        
+        <footer class="post-footer">
+            <div class="post-nav">
+                <a href="/posts/" class="back-to-posts">← Back to All Posts</a>
+            </div>
+        </footer>
+    </div>
+</article>
