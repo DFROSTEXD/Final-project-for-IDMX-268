@@ -1,19 +1,19 @@
-# Game Hub - Video Game Blog
+# Game Hub - Video Game Review Blog
 
-A modern, responsive video game blog built with Eleventy (11ty) v3.x static site generator. This project showcases gaming content including reviews, guides, news, and esports coverage.
+A modern, responsive video game review blog built with Eleventy (11ty) v3.x static site generator. This project focuses on delivering in-depth, honest game reviews across all platforms and genres.
 
 **Live Site:** [Your Netlify URL here]
 
 ## 🎮 About This Project
 
-Game Hub is your ultimate destination for everything gaming! This blog is dedicated to exploring the exciting world of video games, from the latest AAA releases to hidden indie gems.
+Game Hub is your trusted source for comprehensive video game reviews. From the latest AAA blockbusters to hidden indie gems, we provide detailed analysis, honest opinions, and thoughtful critiques to help gamers make informed decisions about their next gaming adventure.
 
 ### Features
 
-- 📝 **Blog Posts**: 6+ comprehensive articles about gaming
-- 🏷️ **Categories & Tags**: Organized content with multiple tags
+- 📝 **Game Reviews**: 6+ detailed review articles covering various games and genres
+- 🏷️ **Categories & Tags**: Organized content with multiple tags for easy navigation
 - 📱 **Fully Responsive**: Works perfectly on mobile, tablet, and desktop
-- 🎨 **Custom Design**: Hand-crafted CSS with modern styling
+- 🎨 **Custom Design**: CSS with modern styling
 - ⚡ **Fast & Static**: Built with Eleventy for optimal performance
 - ♿ **Accessible**: Semantic HTML and ARIA labels
 
@@ -57,35 +57,37 @@ Final-project-for-IDMX-268/
 
 ## 📝 Content
 
-### Blog Posts (6 Collection Items)
+### Game Review Posts (6 Collection Items)
 
-All posts include required frontmatter:
-- ✅ `title` - Post title
-- ✅ `description` - Post description/summary
+All review posts include required frontmatter:
+- ✅ `title` - Game review title
+- ✅ `description` - Review summary/synopsis
 - ✅ `date` - Publication date
 - ✅ `tags` - Multiple tags for categorization
-- ✅ `author` - Post author
+- ✅ `author` - Review author
 
 ### Tags & Categories
 
-Posts are organized with the following tags:
-- `reviews` - Game reviews and recommendations
-- `guides` - Gaming guides and tutorials
+Reviews are organized with the following tags:
+- `reviews` - Game reviews and critical analysis
+- `guides` - Gaming strategy guides and tips
 - `news` - Industry news and updates
 - `esports` - Competitive gaming coverage
-- `indie` - Indie game spotlights
-- `hardware` - PC gaming and tech
-- `featured` - Featured content
+- `indie` - Independent game reviews
+- `hardware` - PC gaming and tech reviews
+- `rpg` - Role-playing game reviews
+- `console` - Console gaming coverage
+- `featured` - Featured review content
 
 ## 🎨 Design Features
 
 ### Layouts & Templates
 
 - **base.njk** - Complete HTML structure with header, nav, footer
-- **post.njk** - Individual blog post template
-- **Homepage** - Displays recent/featured posts from collection
-- **About Page** - Information about the blog and author
-- **Posts Archive** - Complete list of all blog posts
+- **post.njk** - Individual game review template
+- **Homepage** - Displays recent/featured game reviews from collection
+- **About Page** - Information about the review site and reviewer
+- **Posts Archive** - Complete list of all game reviews
 - **404 Page** - Custom error page
 
 ### Navigation
@@ -93,7 +95,7 @@ Posts are organized with the following tags:
 Working navigation menu with links to:
 - Home
 - About
-- All Posts
+- All Posts (Reviews)
 
 ### Footer
 
@@ -107,9 +109,9 @@ Footer includes:
 
 The project uses Eleventy's data cascade effectively:
 
-- **metadata.js** - Global site data (title, description, author, URL)
-- **posts.json** - Directory data file that applies `post.njk` layout to all posts
-- **Frontmatter** - Individual post data that overrides defaults
+- **metadata.js** - Global site data (title: "Game Hub", description, author, URL)
+- **posts.json** - Directory data file that applies `post.njk` layout to all reviews
+- **Frontmatter** - Individual review data that overrides defaults
 
 ## 🚀 Getting Started
 
@@ -183,14 +185,14 @@ The site automatically deploys when changes are pushed to the main branch.
 - Comprehensive README
 
 ✅ **Content**
-- 6 collection items (blog posts)
+- 6 collection items (game review posts)
 - Complete frontmatter on each (title, description, date)
 - Multiple tags/categories
 
 ✅ **Templates & Layouts**
 - Base layout with complete HTML structure
-- Item layout for individual posts
-- Homepage showing recent/featured items
+- Item layout for individual reviews
+- Homepage showing recent/featured reviews
 - About page
 
 ✅ **Data Cascade**
@@ -213,6 +215,14 @@ The site automatically deploys when changes are pushed to the main branch.
 IDMX 268 Final Project  
 December 2025
 
+## 🎮 Project Focus
+
+This game review blog delivers honest, comprehensive reviews across:
+- AAA titles and indie games
+- Multiple gaming platforms (PC, Console, Mobile)
+- Various genres (RPG, FPS, Strategy, and more)
+- Critical analysis and player recommendations
+
 ## 📄 License
 
 This project is created for educational purposes as part of IDMX 268.
@@ -226,5 +236,5 @@ This project is created for educational purposes as part of IDMX 268.
 
 ---
 
-**Level up your gaming knowledge, one post at a time.** 🚀🎮
+**Level up your gaming knowledge with trusted reviews.** 🚀🎮
 
