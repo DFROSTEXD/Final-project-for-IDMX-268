@@ -1,3 +1,3 @@
 # Game Hub - Video Game Review Blog
 
-This project is a review site for games that I have a lot of playtime in. 
+This project is a review site for games that I have a lot of playtime in. It's got different sections as well, one about who I am and what my goal is for this page. Another section where you can select some of the different reviews I've done, and you can also click on the reviews to read the full reviews I have made. There is also a "Contact me" page if the user wants to send me a message to my email if they want me to review any other games. The footer also has (fake) my social media that I can be contacted from as well. 
