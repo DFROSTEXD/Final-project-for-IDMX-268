@@ -2,8 +2,8 @@
 title: "The Best RPGs of 2025: A Comprehensive Review"
 description: "Dive into our comprehensive review of this year's most immersive role-playing games that have captivated players worldwide with stunning graphics and engaging storylines."
 date: 2025-12-15
-tags: 
-  - reviews
+tags:
+  - article
   - rpg
   - featured
 author: William H

@@ -4,7 +4,7 @@ description: "Discover amazing independent games that flew under the radar. Thes
 date: 2025-12-05
 tags:
   - indie
-  - reviews
+  - article
   - recommendations
 author: William H
 ---
