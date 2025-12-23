@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Game Reviews
+description: In-depth reviews of popular games
+---
+
+<section class="full-reviews">
+    <div class="container">
+        <h2 class="section-title">Game Reviews</h2>
+
+        {% for review in collections.reviews %}
+        <article class="full-review">
+            <h3><a href="{{ review.url }}">{{ review.data.title }}</a></h3>
+            <div class="review-meta">
+                <span class="date">{{ review.date | date("%B %d, %Y") }}</span>
+                <span class="rating">{{ review.data.rating }}</span>
+            </div>
+            <p>{{ review.data.description }}</p>
+            <a href="{{ review.url }}" class="read-more">Read Full Review →</a>
+        </article>
+        {% endfor %}
+    </div>
+</section>

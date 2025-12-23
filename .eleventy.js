@@ -8,10 +8,17 @@ export default function(eleventyConfig) {
   // Watch CSS files for changes
   eleventyConfig.addWatchTarget("src/css/");
   
-  // Create posts collection
+  // Create posts collection (for articles/news)
   eleventyConfig.addCollection("posts", function(collectionApi) {
     return collectionApi.getFilteredByTag("posts").sort((a, b) => {
       return a.date - b.date;
+    });
+  });
+
+  // Create reviews collection (for game reviews)
+  eleventyConfig.addCollection("reviews", function(collectionApi) {
+    return collectionApi.getFilteredByTag("reviews").sort((a, b) => {
+      return b.date - a.date; // newest first
     });
   });
   
